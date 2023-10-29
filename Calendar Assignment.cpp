@@ -3,8 +3,8 @@
 int start(int year);
 
 int main(void) {
-	const char* monthNames[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };//name of months array
-	int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};//number of days in months array
+	const char* monthNames[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };//name of the months array
+	int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};//number of days in the months array
 	int month, year;
 	
 	printf("%s", "Please enter year for this calendar: ");
@@ -19,12 +19,12 @@ int main(void) {
 
 		int dayOfWeek;
 		
-		printf("\n%s %d\n", monthNames[month], year);//printing month name
-		printf("\nSun  Mon  Tue  Wed  Thu  Fri  Sat\n");//days of week
-		for (dayOfWeek = 1; dayOfWeek < startingDay; dayOfWeek++)//printing blanks till starting day of month
+		printf("\n%s %d\n", monthNames[month], year);//printing the month name
+		printf("\nSun  Mon  Tue  Wed  Thu  Fri  Sat\n");//days of the week
+		for (dayOfWeek = 1; dayOfWeek < startingDay; dayOfWeek++)//printing blanks till starting day of the months
 			printf("     ");
 
-		for (int date = 1; date <= daysInMonth[month]; date++) {//printing days of the month till last day nextline after evert saturday
+		for (int date = 1; date <= daysInMonth[month]; date++) {//printing days of the month till last day and nextline after every saturday
 
 			printf("%-5d", date);
 			if (++dayOfWeek > 7) {
@@ -35,7 +35,7 @@ int main(void) {
 		if (dayOfWeek != 1)
 			printf("\n");
 
-		startingDay = dayOfWeek;//last day of the month saved for next month starting date
+		startingDay = dayOfWeek;//last day of the month saved for next months starting date
 
 	}
 	printf("\n\n\n");
@@ -43,7 +43,7 @@ int main(void) {
 int start(int year) {
 	
 	
-	int ref_year = 1000, leap = 0, diff, day, dayDiff;
+	int ref_year = 1000, leap = 0, diff, day, dayDiff;//take 1 January 1000 as a reference which is wednesday
 	unsigned long long int total_days = 0;
 
 		diff = year - ref_year;
