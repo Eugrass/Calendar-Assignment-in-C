@@ -44,7 +44,7 @@ int start(int year) {
 	
 	
 	int ref_year = 1000, leap = 0, diff, day, dayDiff;//take 1 January 1000 as a reference which is wednesday
-	unsigned long long int total_days = 0;
+	unsigned int total_days = 0;
 
 		diff = year - ref_year;
 
