@@ -48,24 +48,24 @@ public class RockPaperScissor {
                 case "paper":
                     if (computer == 0) {
                         System.out.println("You won");
+                        pCounter++;
                     } else if (computer == 1) {
                         System.out.println("It is Draw");
-                        cCounter++;
                     } else if (computer == 2) {
                         System.out.println("Computer won");
-                        pCounter++;
+                        cCounter++;
                     }
                     break;
                 case "Scissor":
                 case "scissor":
                     if (computer == 0) {
                         System.out.println("Computer won");
+                        cCounter;
                     } else if (computer == 1) {
                         System.out.println("You won");
-                        cCounter++;
+                        pCounter++;
                     } else if (computer == 2) {
                         System.out.println("It is Draw");
-                        pCounter++;
                     }
                     break;
 
