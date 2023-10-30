@@ -60,7 +60,7 @@ public class RockPaperScissor {
                 case "scissor":
                     if (computer == 0) {
                         System.out.println("Computer won");
-                        cCounter;
+                        cCounter++;
                     } else if (computer == 1) {
                         System.out.println("You won");
                         pCounter++;
